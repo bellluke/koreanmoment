@@ -1,0 +1,993 @@
+/* ─── Reset ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #0a0a0a;
+  color: #e8e4df;
+  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── Shared Room Styles ─── */
+.room {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.room-content {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  max-width: 640px;
+  width: 90%;
+}
+
+.room-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════
+   FEATURED POEM (Entrance Hall)
+   ═══════════════════════════════════════ */
+.featured {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.featured-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: featured-drift 25s ease-in-out infinite alternate;
+}
+
+@keyframes featured-drift {
+  0%   { transform: scale(1.0) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -0.5%); }
+}
+
+.featured-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 45% 15%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 35%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 50%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 25% 45%, rgba(255,255,255,0.35) 0%, transparent 100%);
+}
+
+.featured-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 2em;
+}
+
+.featured-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(232, 228, 223, 0.3);
+  margin-bottom: 3em;
+}
+
+.featured-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: rgba(232, 228, 223, 0.95);
+  margin-bottom: 0.2em;
+  line-height: 1.3;
+}
+
+.featured-title-ko {
+  font-family: var(--font-noto-serif-kr), 'Noto Serif KR', serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: rgba(232, 228, 223, 0.45);
+  margin-bottom: 0.6em;
+}
+
+.featured-poet {
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  color: rgba(232, 228, 223, 0.35);
+  letter-spacing: 0.15em;
+  margin-bottom: 3em;
+}
+
+.featured-excerpt {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 2;
+  color: rgba(232, 228, 223, 0.6);
+  font-style: italic;
+  margin-bottom: 3em;
+}
+
+.featured-enter {
+  display: inline-block;
+  font-family: var(--font-noto-serif), 'Noto Serif', serif;
+  font-size: 0.85rem;
+  color: rgba(232, 228, 223, 0.4);
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  padding: 0.8em 2em;
+  border: 1px solid rgba(232, 228, 223, 0.15);
+  border-radius: 2px;
+  transition: all 0.4s;
+}
+
+.featured-enter:hover {
+  color: rgba(232, 228, 223, 0.8);
+  border-color: rgba(232, 228, 223, 0.4);
+  background: rgba(232, 228, 223, 0.03);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: opacity 1s;
+}
+
+.scroll-down::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(232,228,223,0.3));
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.5; }
+}
+
+/* ═══════════════════════════════════════
+   GALLERY WALL
+   ═══════════════════════════════════════ */
+.gallery-section {
+  position: relative;
+  background: #0a0a0a;
+  padding: 8vh 0 12vh;
+}
+
+/* Filter bar */
+.filter-bar {
+  text-align: center;
+  padding: 0 2em 6vh;
+}
+
+.filter-link {
+  font-size: 0.8rem;
+  color: rgba(232, 228, 223, 0.25);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  margin: 0 0.8em;
+  padding: 0.3em 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: none;
+  font-family: inherit;
+  transition: color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.filter-link:hover,
+.filter-link.active {
+  color: rgba(232, 228, 223, 0.6);
+  border-bottom-color: rgba(232, 228, 223, 0.3);
+}
+
+.filter-sep {
+  color: rgba(232, 228, 223, 0.1);
+  margin: 0 0.2em;
+  user-select: none;
+}
+
+/* Masonry wall */
+.wall {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2em;
+  columns: 3;
+  column-gap: 1.2em;
+}
+
+@media (max-width: 800px) {
+  .wall { columns: 2; column-gap: 0.8em; }
+}
+
+@media (max-width: 480px) {
+  .wall { columns: 2; column-gap: 0.6em; padding: 0 1em; }
+}
+
+/* Individual poem frame */
+.frame {
+  break-inside: avoid;
+  margin-bottom: 1.2em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  text-decoration: none;
+  display: block;
+}
+
+.frame.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.frame-image {
+  width: 100%;
+  display: block;
+  position: relative;
+  transition: transform 0.8s ease-out;
+  overflow: hidden;
+}
+
+.frame-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.frame:hover .frame-image {
+  transform: scale(1.03);
+}
+
+.frame-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3em 1.2em 1.2em;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  transition: background 0.4s;
+}
+
+.frame:hover .frame-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+}
+
+.frame-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(232, 228, 223, 0.9);
+  margin-bottom: 0.15em;
+  letter-spacing: 0.03em;
+}
+
+.frame-title-ko {
+  font-family: var(--font-noto-serif-kr), 'Noto Serif KR', serif;
+  font-size: 0.8rem;
+  color: rgba(232, 228, 223, 0.45);
+  margin-bottom: 0.5em;
+}
+
+.frame-poet {
+  font-size: 0.7rem;
+  color: rgba(232, 228, 223, 0.3);
+  letter-spacing: 0.1em;
+}
+
+.frame-excerpt {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: rgba(232, 228, 223, 0.5);
+  line-height: 1.7;
+  margin-top: 0.8em;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.4s ease-out, margin-top 0.4s;
+}
+
+.frame:hover .frame-excerpt {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 0.8em;
+}
+
+/* Size variations */
+.frame-large .frame-image { aspect-ratio: 3 / 4; }
+.frame-medium .frame-image { aspect-ratio: 4 / 3; }
+.frame-tall .frame-image { aspect-ratio: 2 / 3; }
+.frame-wide .frame-image { aspect-ratio: 16 / 9; }
+.frame-square .frame-image { aspect-ratio: 1 / 1; }
+
+/* ── Mood colors ── */
+.mood-night     .frame-image { background: linear-gradient(160deg, #1a2540 0%, #0d1520 60%, #0a0e14 100%); }
+.mood-red       .frame-image { background: linear-gradient(160deg, #2a1520 0%, #1a0d15 60%, #150a10 100%); }
+.mood-earth     .frame-image { background: linear-gradient(160deg, #2a2015 0%, #1a150d 60%, #14100a 100%); }
+.mood-deep      .frame-image { background: linear-gradient(160deg, #0d1530 0%, #0a0e20 60%, #080a18 100%); }
+.mood-grey      .frame-image { background: linear-gradient(160deg, #1a1a20 0%, #121218 60%, #0d0d12 100%); }
+.mood-green     .frame-image { background: linear-gradient(160deg, #152518 0%, #0d1a10 60%, #0a140d 100%); }
+.mood-autumn    .frame-image { background: linear-gradient(160deg, #2a1a0d 0%, #1a1008 60%, #140d06 100%); }
+.mood-spring    .frame-image { background: linear-gradient(160deg, #201a28 0%, #15101a 60%, #100d15 100%); }
+.mood-sea       .frame-image { background: linear-gradient(160deg, #0d2028 0%, #0a1820 60%, #081218 100%); }
+.mood-snow      .frame-image { background: linear-gradient(160deg, #1e2025 0%, #15181d 60%, #101215 100%); }
+.mood-field     .frame-image { background: linear-gradient(160deg, #1a2015 0%, #10180d 60%, #0d140a 100%); }
+.mood-rain      .frame-image { background: linear-gradient(160deg, #151a22 0%, #0d1218 60%, #0a0e14 100%); }
+.mood-candle    .frame-image { background: linear-gradient(160deg, #2a2018 0%, #1a1510 60%, #14100a 100%); }
+
+/* Shimmer on night/deep moods */
+.mood-night .frame-image::after,
+.mood-deep .frame-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 30% 25%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 40%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+/* Filter animation */
+.frame.filtered-out {
+  opacity: 0 !important;
+  transform: scale(0.95) !important;
+  max-height: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  transition: opacity 0.4s, transform 0.4s, max-height 0.5s 0.2s, margin-bottom 0.5s 0.2s;
+}
+
+/* ═══════════════════════════════════════
+   DETAIL PAGE — Room Styles
+   ═══════════════════════════════════════ */
+
+/* Room 1: Threshold */
+.room-threshold {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: opacity 0.1s linear;
+  animation: kenburns 20s ease-in-out infinite alternate;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 25%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 40%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 45%, rgba(255,255,255,0.45) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 20%, rgba(255,255,255,0.25) 0%, transparent 100%);
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1.0) translate(0, 0); }
+  100% { transform: scale(1.06) translate(-1%, -0.5%); }
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero-title h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(232, 228, 223, 0.95);
+  margin-bottom: 0.3em;
+}
+
+.hero-title .title-ko {
+  font-family: var(--font-noto-serif-kr), 'Noto Serif KR', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  color: rgba(232, 228, 223, 0.6);
+  margin-bottom: 0.8em;
+}
+
+.hero-title .poet {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 400;
+  color: rgba(232, 228, 223, 0.4);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.3;
+  animation: pulse 3s ease-in-out infinite;
+  transition: opacity 1s;
+}
+
+.scroll-hint::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(232,228,223,0.5));
+}
+
+/* Spacers */
+.dissolve-spacer {
+  position: relative;
+  height: 50vh;
+  z-index: 1;
+  background: #0a0a0a;
+}
+
+.breath-spacer {
+  position: relative;
+  z-index: 1;
+  height: 30vh;
+  background: #0a0a0a;
+}
+
+.blackout-spacer {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  background: #0a0a0a;
+}
+
+.emptying-spacer {
+  position: relative;
+  z-index: 1;
+  height: 120vh;
+  background: #0a0a0a;
+}
+
+.warm-spacer {
+  position: relative;
+  z-index: 1;
+  height: 40vh;
+  background: linear-gradient(to bottom, #0a0a0a, #141210);
+}
+
+.lighten-spacer {
+  position: relative;
+  z-index: 1;
+  height: 30vh;
+  background: linear-gradient(to bottom, #141210, #1a1814);
+}
+
+/* Room 2: Poem text (English) */
+.room-poem {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  padding: 10vh 0 15vh;
+}
+
+.poem-text {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 2.2;
+  letter-spacing: 0.02em;
+  color: rgba(232, 228, 223, 0.92);
+}
+
+.poem-text .stanza {
+  margin-bottom: 2.5em;
+}
+
+.poem-text .line {
+  display: block;
+}
+
+/* Room 3: Voice (Korean) */
+.room-voice {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  padding: 0 0 15vh;
+}
+
+.poem-text-ko {
+  font-family: var(--font-noto-serif-kr), 'Noto Serif KR', serif;
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 400;
+  line-height: 2.4;
+  letter-spacing: 0.05em;
+  color: rgba(232, 228, 223, 0.88);
+}
+
+.poem-text-ko .stanza {
+  margin-bottom: 2.5em;
+}
+
+.poem-text-ko .line {
+  display: block;
+}
+
+/* Play button */
+.room-play {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 228, 223, 0.2);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+  color: rgba(232, 228, 223, 0.5);
+  font-size: 1.1rem;
+}
+
+.play-btn:hover {
+  border-color: rgba(232, 228, 223, 0.5);
+  background: rgba(232, 228, 223, 0.05);
+  color: rgba(232, 228, 223, 0.8);
+}
+
+/* Room 4: Scenery */
+.room-scenery {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  padding: 0;
+}
+
+.scene-image {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  animation: kenburns-scene 15s ease-in-out infinite alternate;
+}
+
+.scene-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scene-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+@keyframes kenburns-scene {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.04); }
+}
+
+/* Scene background gradients */
+.scene-1 {
+  background:
+    radial-gradient(ellipse at 50% 40%, #1e3050 0%, transparent 70%),
+    linear-gradient(180deg, #162030 0%, #0d1520 60%, #0a0e14 100%);
+}
+
+.scene-2 {
+  background:
+    radial-gradient(ellipse at 30% 60%, #1a2818 0%, transparent 60%),
+    linear-gradient(160deg, #0f1a0d 0%, #1a2515 50%, #0d120a 100%);
+}
+
+.scene-3 {
+  background:
+    radial-gradient(ellipse at 60% 30%, #2a1a30 0%, transparent 60%),
+    linear-gradient(180deg, #150d1a 0%, #1a1025 50%, #0d0a12 100%);
+}
+
+.scene-4 {
+  background:
+    radial-gradient(ellipse at 40% 50%, #1a2540 0%, transparent 70%),
+    radial-gradient(ellipse at 70% 20%, #0d1520 0%, transparent 40%),
+    linear-gradient(180deg, #0d1420 0%, #0a0e18 100%);
+}
+
+.scene-4::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 2px;
+  background-image:
+    radial-gradient(1px 1px at 25% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 30%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 45% 40%, rgba(255,255,255,0.45) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 50%, rgba(255,255,255,0.3) 0%, transparent 100%);
+}
+
+.scene-gap-1 { height: 30vh; }
+.scene-gap-2 { height: 50vh; }
+.scene-gap-3 { height: 80vh; }
+
+/* Room 5: Silence */
+.room-silence {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  padding: 40vh 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-silence .room-content {
+  transition-duration: 2s;
+}
+
+.silence-text {
+  text-align: center;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  line-height: 2.2;
+  color: rgba(232, 228, 223, 0.7);
+  letter-spacing: 0.03em;
+}
+
+.silence-text .year {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.silence-text .death {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.silence-text .age {
+  display: block;
+  margin-top: 1.5em;
+  color: rgba(232, 228, 223, 0.85);
+}
+
+/* Room 6: Video */
+.room-video {
+  position: relative;
+  z-index: 1;
+  background: #141210;
+  padding: 10vh 0 15vh;
+}
+
+.video-frame {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #0d0b09;
+  border: 1px solid rgba(232, 228, 223, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.video-frame:hover {
+  border-color: rgba(232, 228, 223, 0.2);
+}
+
+.video-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.video-play::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 9px 0 9px 16px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-frame:hover .video-play {
+  background: #ff0000;
+}
+
+.youtube-link {
+  display: block;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.85rem;
+  color: rgba(232, 228, 223, 0.3);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+
+.youtube-link:hover {
+  color: rgba(232, 228, 223, 0.6);
+}
+
+/* Room 7: Shop */
+.room-shop {
+  position: relative;
+  z-index: 1;
+  background: #1a1814;
+  padding: 8vh 0 12vh;
+}
+
+.shop-heading {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: rgba(232, 228, 223, 0.6);
+  letter-spacing: 0.1em;
+  margin-bottom: 4em;
+}
+
+.shop-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.shop-card {
+  background: rgba(232, 228, 223, 0.03);
+  border: 1px solid rgba(232, 228, 223, 0.08);
+  border-radius: 6px;
+  padding: 2em 1.5em;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.shop-card:hover {
+  background: rgba(232, 228, 223, 0.06);
+  border-color: rgba(232, 228, 223, 0.15);
+}
+
+.shop-card .icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.8em;
+  opacity: 0.5;
+}
+
+.shop-card .label {
+  font-size: 0.9rem;
+  color: rgba(232, 228, 223, 0.7);
+  margin-bottom: 0.4em;
+}
+
+.shop-card .sublabel {
+  font-size: 0.75rem;
+  color: rgba(232, 228, 223, 0.35);
+  margin-bottom: 1.2em;
+}
+
+.shop-card .price {
+  font-size: 0.85rem;
+  color: rgba(232, 228, 223, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.shop-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(232, 228, 223, 0.1);
+  margin: 5em auto;
+}
+
+/* More poems */
+.more-heading {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(232, 228, 223, 0.35);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2.5em;
+}
+
+.more-poems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.more-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.more-card:hover {
+  transform: scale(1.03);
+}
+
+.more-card img {
+  position: absolute;
+  inset: -20%;
+  width: 140%;
+  height: 140%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease-out;
+}
+
+.more-card:hover img {
+  transform: scale(1.05);
+}
+
+.more-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
+  z-index: 1;
+}
+
+.more-card .more-title {
+  position: relative;
+  z-index: 2;
+  font-size: 0.9rem;
+  color: rgba(232, 228, 223, 0.85);
+  margin-bottom: 0.3em;
+}
+
+.more-card .more-ko {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-noto-serif-kr), 'Noto Serif KR', serif;
+  font-size: 0.8rem;
+  color: rgba(232, 228, 223, 0.55);
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+.footer {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(232, 228, 223, 0.04);
+  padding: 4em 0;
+  text-align: center;
+}
+
+.footer-detail {
+  background: #1a1814;
+  border-top: 1px solid rgba(232, 228, 223, 0.05);
+}
+
+.footer-brand {
+  font-size: 0.85rem;
+  color: rgba(232, 228, 223, 0.25);
+  letter-spacing: 0.15em;
+  margin-bottom: 1em;
+}
+
+.footer-links {
+  font-size: 0.7rem;
+  color: rgba(232, 228, 223, 0.15);
+  letter-spacing: 0.1em;
+}
+
+.footer-links a {
+  color: rgba(232, 228, 223, 0.2);
+  text-decoration: none;
+  margin: 0 1em;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: rgba(232, 228, 223, 0.5);
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 600px) {
+  .room-silence { padding: 30vh 0; }
+  .emptying-spacer { height: 80vh; }
+  .scene-gap-3 { height: 60vh; }
+  .more-poems { grid-template-columns: repeat(3, 1fr); gap: 0.6em; }
+  .shop-items { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(npm --version:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(chmod:*)",
+      "Bash(/Users/zag/work/projects/toys/koreanmoment/scripts/convert-assets.sh:*)",
+      "Bash(node /Users/zag/work/projects/codesalon/skills/.claude/skills/ace/ace.mjs start:*)",
+      "Bash(node:*)"
+    ]
+  }
+}
