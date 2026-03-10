@@ -11,7 +11,7 @@ export default function SceneryRoom({ poemId, scenes }: SceneryRoomProps) {
     <>
       <section className="room room-scenery">
         {scenes.map((scene, index) => (
-          <div key={index}>
+          <div key={index} style={{ width: '100%' }}>
             <div className={`scene-image ${scene.cssClass}`}>
               <Image
                 src={`/poems/${poemId}/images/${scene.imageFile}`}

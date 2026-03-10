@@ -91,6 +91,7 @@ export const poems: Poem[] = [
     moodColor: "mood-red",
     excerpt: "When you leave, weary of the sight of me, I shall let you go in silence...",
     galleryImageFile: "002-scene-2-v1.webp",
+    youtubeId: "9Rh2yQ1Sw6A",
     scenes: [
       { imageFile: "002-scene-1-v1.webp", alt: "A path through mountain azaleas", cssClass: "scene-1" },
       { imageFile: "002-scene-2-v1.webp", alt: "Pink azalea petals scattered on ground", cssClass: "scene-2" },
@@ -131,6 +132,7 @@ export const poems: Poem[] = [
     moodColor: "mood-earth",
     excerpt: "Across the broad field, toward the eastern edge, a narrow stream winds away...",
     galleryImageFile: "003-scene-1-v2.webp",
+    youtubeId: "2zyodJXhDIc",
     scenes: [
       { imageFile: "003-scene-1-v2.webp", alt: "A wide field with a winding stream", cssClass: "scene-1" },
       { imageFile: "003-scene-2-v1.webp", alt: "An old farmhouse at dusk", cssClass: "scene-2" },
@@ -173,6 +175,7 @@ export const poems: Poem[] = [
     moodColor: "mood-deep",
     excerpt: "One star for memory, one star for love, one star for loneliness...",
     galleryImageFile: "004-scene-2-v1.webp",
+    youtubeId: "Zf3Sd3s8Y-0",
     scenes: [
       { imageFile: "004-scene-1-v1.webp", alt: "Autumn sky filled with stars", cssClass: "scene-1" },
       { imageFile: "004-scene-2-v1.webp", alt: "A young man gazing at the night sky", cssClass: "scene-2" },
@@ -225,6 +228,7 @@ export const poems: Poem[] = [
     moodColor: "mood-grey",
     excerpt: "My beloved has gone. Ah, my cherished beloved has departed...",
     galleryImageFile: "005-scene-1-v1.webp",
+    youtubeId: "hWgKf7Xw_Fo",
     scenes: [
       { imageFile: "005-scene-1-v1.webp", alt: "A figure standing alone in misty mountains", cssClass: "scene-1" },
       { imageFile: "005-scene-2-v3.webp", alt: "Golden flowers turning to dust in the wind", cssClass: "scene-2" },
@@ -263,6 +267,7 @@ export const poems: Poem[] = [
     moodColor: "mood-green",
     excerpt: "In my homeland, July is the season when green grapes ripen...",
     galleryImageFile: "006-scene-1-v1.webp",
+    youtubeId: "hOmN6EZKZh0",
     scenes: [
       { imageFile: "006-scene-1-v1.webp", alt: "Green grapes ripening in July sun", cssClass: "scene-1" },
       { imageFile: "006-scene-2-v1.webp", alt: "Village legends hanging like clusters", cssClass: "scene-2" },
@@ -307,6 +312,7 @@ export const poems: Poem[] = [
     moodColor: "mood-rain",
     excerpt: "I have forgotten that person's name now, but their eyes, their lips remain...",
     galleryImageFile: "007-scene-2-v1.webp",
+    youtubeId: "p0uHmmr2czs",
     scenes: [
       { imageFile: "007-scene-1-v2.webp", alt: "Rain-soaked city streets at night", cssClass: "scene-1" },
       { imageFile: "007-scene-2-v1.webp", alt: "A window pane with condensation", cssClass: "scene-2" },
@@ -351,6 +357,7 @@ export const poems: Poem[] = [
     moodColor: "mood-autumn",
     excerpt: "O name shattered into pieces! O name I will call until I die...",
     galleryImageFile: "008-scene-2-v1.webp",
+    youtubeId: "m5-9iXGYW9Q",
     scenes: [
       { imageFile: "008-scene-1-v1.webp", alt: "A shattered name echoing in the void", cssClass: "scene-1" },
       { imageFile: "008-scene-2-v1.webp", alt: "A lone figure calling from a mountaintop", cssClass: "scene-2" },
@@ -393,6 +400,7 @@ export const poems: Poem[] = [
     moodColor: "mood-snow",
     excerpt: "Something cold and sorrowful hovers on the glass...",
     galleryImageFile: "009-scene-2-v3.webp",
+    youtubeId: "DKpSdetwpmE",
     scenes: [
       { imageFile: "009-scene-1-v1.webp", alt: "Cold glass window in the night", cssClass: "scene-1" },
       { imageFile: "009-scene-2-v3.webp", alt: "Mist forming on cold glass", cssClass: "scene-2" },
@@ -427,6 +435,7 @@ export const poems: Poem[] = [
     moodColor: "mood-field",
     excerpt: "Now it is another's land — does spring come even to stolen fields?",
     galleryImageFile: "010-scene-2-v1.webp",
+    youtubeId: "4TL_OcVzoLc",
     scenes: [
       { imageFile: "010-scene-1-v1.webp", alt: "Sunlit stolen fields in spring", cssClass: "scene-1" },
       { imageFile: "010-scene-2-v1.webp", alt: "Blue sky meeting blue field", cssClass: "scene-2" },
@@ -481,6 +490,7 @@ export const poems: Poem[] = [
     moodColor: "mood-candle",
     excerpt: "In the distant dawn of time, when the heavens first opened...",
     galleryImageFile: "011-scene-3-v1.webp",
+    youtubeId: "gPrTZCIl_lI",
     scenes: [
       { imageFile: "011-scene-1-v1.webp", alt: "The heavens opening in primordial dawn", cssClass: "scene-1" },
       { imageFile: "011-scene-2-v1.webp", alt: "Mountain ranges rushing toward the sea", cssClass: "scene-2" },
@@ -523,6 +533,7 @@ export const poems: Poem[] = [
     moodColor: "mood-spring",
     excerpt: "On the mountain, flowers bloom — flowers bloom...",
     galleryImageFile: "012-scene-4-v1.webp",
+    youtubeId: "_0ttQm5FnZ8",
     scenes: [
       { imageFile: "012-scene-1-v1.webp", alt: "Mountain flowers blooming in spring", cssClass: "scene-1" },
       { imageFile: "012-scene-2-v1.webp", alt: "Flowers standing alone far off on a mountain", cssClass: "scene-2" },
@@ -563,6 +574,7 @@ export const poems: Poem[] = [
     moodColor: "mood-sea",
     excerpt: "I walk around the mountain bend to a lonesome well...",
     galleryImageFile: "013-scene-2-v1.webp",
+    youtubeId: "hrc_YudBFTU",
     scenes: [
       { imageFile: "013-scene-1-v1.webp", alt: "A path around a mountain bend", cssClass: "scene-1" },
       { imageFile: "013-scene-2-v1.webp", alt: "Moon and clouds reflected in a well", cssClass: "scene-2" },

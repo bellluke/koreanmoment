@@ -13,7 +13,10 @@
       "Bash(python3 -c \" import sys, re html = sys.stdin.read\\(\\) # Find scene-image section m = re.search\\(r''room-scenery.*?</section>'', html, re.DOTALL\\) if m: print\\(m.group\\(\\)[:2000]\\) \")",
       "Bash(for f in /Users/zag/work/projects/toys/koreanmoment/public/poems/002/images/*.webp)",
       "Bash(done)",
-      "Bash(lsof:*)"
+      "Bash(lsof:*)",
+      "Bash(npm i:*)",
+      "Bash(kill %1)",
+      "WebFetch(domain:www.youtube.com)"
     ]
   }
 }
