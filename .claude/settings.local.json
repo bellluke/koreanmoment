@@ -8,7 +8,12 @@
       "Bash(chmod:*)",
       "Bash(/Users/zag/work/projects/toys/koreanmoment/scripts/convert-assets.sh:*)",
       "Bash(node /Users/zag/work/projects/codesalon/skills/.claude/skills/ace/ace.mjs start:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(python3 -c \" import sys, re html = sys.stdin.read\\(\\) # Find scene-image section m = re.search\\(r''room-scenery.*?</section>'', html, re.DOTALL\\) if m: print\\(m.group\\(\\)[:2000]\\) \")",
+      "Bash(for f in /Users/zag/work/projects/toys/koreanmoment/public/poems/002/images/*.webp)",
+      "Bash(done)",
+      "Bash(lsof:*)"
     ]
   }
 }

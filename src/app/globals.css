@@ -611,15 +611,7 @@ a {
   border-radius: 2px;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
   animation: kenburns-scene 15s ease-in-out infinite alternate;
-}
-
-.scene-image.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .scene-image img {
@@ -970,14 +962,22 @@ a {
   letter-spacing: 0.1em;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links button {
   color: rgba(232, 228, 223, 0.2);
   text-decoration: none;
   margin: 0 1em;
   transition: color 0.3s;
+  background: none;
+  border: none;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  padding: 0;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links button:hover {
   color: rgba(232, 228, 223, 0.5);
 }
 
