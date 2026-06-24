@@ -604,5 +604,342 @@ export const poems: Poem[] = [
       deathInfo: ["Yun Dong-ju died in Fukuoka Prison,", "February 16, 1945."],
       age: "He was 27."
     }
+  },
+  {
+    id: "014",
+    slug: "mother-dear-sister-kim-sowol",
+    titleEn: "Mother, Dear Sister",
+    titleKo: "엄마야 누나야",
+    authorEn: "Kim Sowol",
+    authorKo: "김소월",
+    authorSlug: "kim-sowol",
+    exhibitionType: "full",
+    mood: ["longing", "nature"],
+    frameSize: "frame-square",
+    moodColor: "mood-spring",
+    excerpt: "Mother, dear sister, let us live by the river. In the yard, golden sand gleams in the light...",
+    galleryImageFile: "014-scene-1-v1.webp",
+    youtubeId: "rqRhxGKKGGA",
+    scenes: [
+      { imageFile: "014-scene-1-v1.webp", alt: "A tranquil riverbank at late afternoon with swaying reeds", cssClass: "scene-1" },
+      { imageFile: "014-scene-2-v1.webp", alt: "Fine golden sand sparkling in sunlight", cssClass: "scene-2" },
+      { imageFile: "014-scene-3-v1.webp", alt: "Tall riverside reeds bending in a soft breeze", cssClass: "scene-3" },
+      { imageFile: "014-scene-4-v1.webp", alt: "A peaceful river valley at golden hour", cssClass: "scene-4" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["Mother, dear sister, let us live by the river.", "In the yard, golden sand gleams in the light.", "Beyond the back door, reed leaves sing their song.", "Mother, dear sister, let us live by the river."]
+      ],
+      stanzasKo: [
+        ["엄마야 누나야 강변 살자", "뜰에는 반짝이는 금모래 빛", "뒷문 밖에는 갈잎의 노래", "엄마야 누나야 강변 살자"]
+      ]
+    },
+    silence: {
+      writtenDate: "Published in 1922; collected in Azaleas, 1925.",
+      deathInfo: ["Kim Sowol died on December 24, 1934."],
+      age: "He was 32."
+    }
+  },
+  {
+    id: "015",
+    slug: "wayfarer-park-mokwol",
+    titleEn: "The Wayfarer",
+    titleKo: "나그네",
+    authorEn: "Park Mok-wol",
+    authorKo: "박목월",
+    authorSlug: "park-mokwol",
+    exhibitionType: "full",
+    mood: ["longing", "nature"],
+    frameSize: "frame-medium",
+    moodColor: "mood-autumn",
+    excerpt: "Like the moon drifting through clouds, the wayfarer goes on...",
+    galleryImageFile: "015-scene-2-v1.webp",
+    youtubeId: "sR1N8c8aaTk",
+    scenes: [
+      { imageFile: "015-scene-1-v1.webp", alt: "An earthen path leading from a river crossing into wheat fields", cssClass: "scene-1" },
+      { imageFile: "015-scene-2-v1.webp", alt: "A lone traveler walking under a pale moon and drifting clouds", cssClass: "scene-2" },
+      { imageFile: "015-scene-3-v1.webp", alt: "A single narrow path stretching through southern hills", cssClass: "scene-3" },
+      { imageFile: "015-scene-4-v1.webp", alt: "A burning evening glow over distant village rooftops", cssClass: "scene-4" },
+      { imageFile: "015-scene-5-v1.webp", alt: "A small silhouette of a wayfarer beneath a vast evening sky", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["Across the river ferry,", "along the path through wheat fields—"],
+        ["Like the moon drifting through clouds,", "the wayfarer goes on."],
+        ["A single road,", "three hundred ri through the southern country."],
+        ["In every village where wine is ripening,", "the evening glow burns."],
+        ["Like the moon drifting through clouds,", "the wayfarer goes on."]
+      ],
+      stanzasKo: [
+        ["강나루 건너서", "밀밭 길을"],
+        ["구름에 달 가듯이", "가는 나그네"],
+        ["길은 외줄기", "남도 삼백리"],
+        ["술 익는 마을마다", "타는 저녁놀"],
+        ["구름에 달 가듯이", "가는 나그네"]
+      ]
+    },
+    silence: {
+      writtenDate: "Published in Cheongnokjip, 1946.",
+      deathInfo: ["Park Mok-wol died on March 24, 1978."],
+      age: "He was 63."
+    }
+  },
+  {
+    id: "016",
+    slug: "when-that-day-comes-sim-hun",
+    titleEn: "When That Day Comes",
+    titleKo: "그날이 오면",
+    authorEn: "Sim Hun",
+    authorKo: "심훈",
+    authorSlug: "sim-hun",
+    exhibitionType: "full",
+    mood: ["resistance"],
+    frameSize: "frame-large",
+    moodColor: "mood-candle",
+    excerpt: "When that day comes, and Mount Samgak rises up to dance, and the Han River overturns, surging to the heavens...",
+    galleryImageFile: "016-scene-1-v1.webp",
+    youtubeId: "khE5YCuiUH8",
+    scenes: [
+      { imageFile: "016-scene-1-v1.webp", alt: "Craggy mountain peaks against a pre-dawn sky", cssClass: "scene-1" },
+      { imageFile: "016-scene-2-v2.webp", alt: "Dark river water catching the first light of dawn", cssClass: "scene-2" },
+      { imageFile: "016-scene-3-v1.webp", alt: "An aged bronze bell hanging in deep shadow", cssClass: "scene-3" },
+      { imageFile: "016-scene-4-v1.webp", alt: "A broad empty avenue at golden hour", cssClass: "scene-4" },
+      { imageFile: "016-scene-5-v1.webp", alt: "A large traditional Korean drum resting on weathered wood", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["When that day comes, when that day finally comes,", "and Mount Samgak rises up to dance a great swaying dance,", "and the Han River overturns, surging to the heavens—", "if only that day comes before my life is cut short,", "I will fly like a crow across the night sky", "and strike the great bell of Jongno with my skull until it rings.", "Though my skull shatter into a thousand pieces,", "dying of joy, what grief could possibly remain?"],
+        ["When that day comes, oh, when that day comes at last,", "and I roll weeping and leaping down the broad avenue before Yukjo,", "if the joy still overflows and my chest feels ready to burst,", "I will take a sharpened blade and strip the skin from this body", "to fashion an enormous drum, and hoist it onto my shoulders,", "and walk at the very front of your great procession—", "hearing the thunder of that drum, my spirit soaring, I would leap forward", "and be the old bachelor who sings the first note for you all."]
+      ],
+      stanzasKo: [
+        ["그 날이 오면, 그 날이 오며는", "삼각산이 일어나 더덩실 춤이라도 추고,", "한강물이 뒤집혀 용솟음칠 그 날이,", "이 목숨이 끊지기 전에 와주기만 하량이면,", "나는 밤하늘에 날으는 까마귀와 같이", "종로의 인경을 머리로 들이받아 울리오리다.", "두개골은 깨어져 산산조각이 나도", "기뻐서 죽사오매 오히려 무슨 한이 남으오리까."],
+        ["그 날이 와서, 오오 그 날이 와서", "육조 앞 넓은 길을 울며 뛰며 딩굴어도", "그래도 넘치는 기쁨에 가슴이 미어질 듯하거든", "드는 칼로 이 몸의 가죽이라도 벗겨서", "커다란 북을 만들어 들쳐메고는", "여러분의 행렬에 앞장을 서오리다,", "우렁찬 그 북소리를 들으며 신명이 나서 뛰쳐나아가", "여러분에게 선창하는 늙은 총각이 되고 지어라."]
+      ]
+    },
+    silence: {
+      writtenDate: "Written in 1930; published posthumously in 1949.",
+      deathInfo: ["Sim Hun died of typhoid on September 16, 1936,", "nine years before Korea's liberation."],
+      age: "He was 35."
+    }
+  },
+  {
+    id: "017",
+    slug: "mirror-yi-sang",
+    titleEn: "Mirror",
+    titleKo: "거울",
+    authorEn: "Yi Sang",
+    authorKo: "이상",
+    authorSlug: "yi-sang",
+    exhibitionType: "full",
+    mood: ["longing"],
+    frameSize: "frame-square",
+    moodColor: "mood-grey",
+    excerpt: "There is no sound inside the mirror. There is surely no world that quiet anywhere else...",
+    galleryImageFile: "017-scene-1-v1.webp",
+    youtubeId: "7VOOwQO4ZIU",
+    scenes: [
+      { imageFile: "017-scene-1-v1.webp", alt: "An old mirror leaning against a bare wall in an empty room", cssClass: "scene-1" },
+      { imageFile: "017-scene-2-v2.webp", alt: "The back of a head and ear facing a dim mirror", cssClass: "scene-2" },
+      { imageFile: "017-scene-3-v2.webp", alt: "A hand and its mirrored reflection almost touching", cssClass: "scene-3" },
+      { imageFile: "017-scene-4-v1.webp", alt: "A tall plain mirror in an austere bare room", cssClass: "scene-4" },
+      { imageFile: "017-scene-5-v1.webp", alt: "A small hand mirror beside spectacles on a wooden desk", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["There is no sound inside the mirror.", "There is surely no world that quiet anywhere else."],
+        ["Inside the mirror I also have ears.", "Two pitiful ears that cannot understand a word I say."],
+        ["The me inside the mirror is left-handed.", "A left-handed one who does not know how to take my handshake — who does not know handshakes at all."],
+        ["Because of the mirror I cannot reach in and touch the me inside the mirror.", "And yet, if not for the mirror, how could I have ever even met the me inside the mirror."],
+        ["I do not have a mirror with me now, but the me inside the mirror is always inside the mirror.", "I do not quite know, but he must be absorbed in his own solitary business."],
+        ["The me inside the mirror is the opposite of the real me, and yet,", "he resembles me rather closely.", "I cannot worry over the me inside the mirror, cannot examine him as a doctor would, and that is quite a sorry thing."]
+      ],
+      stanzasKo: [
+        ["거울속에는소리가없소", "저렇게까지조용한세상은참없을것이오"],
+        ["거울속에도내게귀가있소", "내말을못알아듣는딱한귀가두개있소"],
+        ["거울속의나는왼손잡이오", "내악수를받을줄모르는—악수를모르는왼손잡이오"],
+        ["거울때문에나는거울속의나를만져보지를못하는구료마는", "거울이아니었던들내가어찌거울속의나를만나보기만이라도했겠소"],
+        ["나는지금거울을안가졌소마는거울속에는늘거울속의나가있소", "잘은모르지만외로된사업에골몰할께요"],
+        ["거울속의나는참나와는반대요마는", "또꽤닮았소", "나는거울속의나를근심하고진찰할수없으니퍽섭섭하오"]
+      ]
+    },
+    silence: {
+      writtenDate: "Published in Catholic Youth, October 1933.",
+      deathInfo: ["Yi Sang died of tuberculosis in Tokyo,", "April 17, 1937."],
+      age: "He was 26."
+    }
+  },
+  {
+    id: "018",
+    slug: "until-peonies-bloom-kim-yeongnang",
+    titleEn: "Until the Peonies Bloom",
+    titleKo: "모란이 피기까지는",
+    authorEn: "Kim Yeongnang",
+    authorKo: "김영랑",
+    authorSlug: "kim-yeongnang",
+    exhibitionType: "full",
+    mood: ["longing", "nature"],
+    frameSize: "frame-tall",
+    moodColor: "mood-red",
+    excerpt: "Until the peonies bloom I will go on waiting for my spring — for that spring of radiant sorrow...",
+    galleryImageFile: "018-scene-5-v1.webp",
+    youtubeId: "Bis3MaioPb4",
+    scenes: [
+      { imageFile: "018-scene-1-v1.webp", alt: "A bare peony shrub with tight buds in a quiet garden at dawn", cssClass: "scene-1" },
+      { imageFile: "018-scene-2-v3.webp", alt: "A fallen crimson peony blossom on an aged wooden veranda", cssClass: "scene-2" },
+      { imageFile: "018-scene-3-v1.webp", alt: "Curled peony petals withering on warm sun-dried earth", cssClass: "scene-3" },
+      { imageFile: "018-scene-4-v1.webp", alt: "The empty peony shrub in summer with no flowers remaining", cssClass: "scene-4" },
+      { imageFile: "018-scene-5-v1.webp", alt: "A single deep crimson peony catching the first morning light", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["Until the peonies bloom", "I will go on waiting for my spring.", "On the day the peonies fall, petal by heavy petal,", "only then will I sink into the sorrow of a spring grown bereft.", "One day in May, that one sweltering day,", "when even the petals lying fallen on the ground wither away,", "and no trace of the peonies remains anywhere under heaven,", "the brightness I had reached up for crumbles wistfully down.", "Once the peonies are gone, that is all — my year is over and done,", "and for three hundred and sixty days I weep, gently and steadily, in quiet grief.", "Until the peonies bloom", "I will still be waiting — for that spring of radiant sorrow."]
+      ],
+      stanzasKo: [
+        ["모란이 피기까지는", "나는 아직 나의 봄을 기다리고 있을 테요", "모란이 뚝뚝 떨어져 버린 날", "나는 비로소 봄을 여읜 설움에 잠길 테요", "오월 어느 날 그 하루 무덥던 날", "떨어져 누운 꽃잎마저 시들어 버리고는", "천지에 모란은 자취도 없어지고", "뻗쳐오르던 내 보람 서운케 무너졌느니", "모란이 지고 말면 그뿐, 내 한 해는 다 가고 말아", "삼백예순날 하냥 섭섭해 우옵내다", "모란이 피기까지는", "나는 아직 기다리고 있을 테요, 찬란한 슬픔의 봄을"]
+      ]
+    },
+    silence: {
+      writtenDate: "Published in 1934; collected in Yeongnang Sijip, 1935.",
+      deathInfo: ["Kim Yeongnang died on September 29, 1950,", "struck by shrapnel during the Korean War."],
+      age: "He was 47."
+    }
+  },
+  {
+    id: "019",
+    slug: "seungmu-cho-jihun",
+    titleEn: "Seungmu — The Monk's Dance",
+    titleKo: "승무",
+    authorEn: "Cho Ji-hun",
+    authorKo: "조지훈",
+    authorSlug: "cho-jihun",
+    exhibitionType: "full",
+    mood: ["longing", "nature"],
+    frameSize: "frame-tall",
+    moodColor: "mood-night",
+    excerpt: "The light flowing across both cheeks is, for being so very beautiful, sorrowful. Our suffering is starlight...",
+    galleryImageFile: "019-scene-4-v1.webp",
+    youtubeId: "qxVjU7VRh3k",
+    scenes: [
+      { imageFile: "019-scene-1-v1.webp", alt: "A folded white gauze peaked hood resting on dark wood", cssClass: "scene-1" },
+      { imageFile: "019-scene-2-v2.webp", alt: "A nun dancer seen from behind with the hood catching candlelight", cssClass: "scene-2" },
+      { imageFile: "019-scene-3-v1.webp", alt: "A yellow tallow candle and moon through paulownia leaves", cssClass: "scene-3" },
+      { imageFile: "019-scene-4-v1.webp", alt: "A pointed white silk slipper lifted at the moment of turning", cssClass: "scene-4" },
+      { imageFile: "019-scene-5-v2.webp", alt: "Two hands pressed together in a palms-pressed prayer", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["The thin gauze white peaked hood,", "folded with care, is a butterfly poised in flight."],
+        ["The blue-shorn head", "hidden beneath the gauze peaked hood,"],
+        ["and the light flowing across both cheeks", "is, for being so very beautiful, sorrowful."],
+        ["In a night when the yellow tallow candle melts in silence on the empty stage", "and on every paulownia leaf the moon goes down,"],
+        ["the long sleeves widen the sky,", "and the fine pointed white silk slipper, turning as if to retreat yet flying onward, lifts gently folded into the air."],
+        ["Black pupils softly raised,", "gather themselves upon a single far star,"],
+        ["and on the peach-blossom cheek tremble two drops about to fall —", "the worldly cares may grind us down, yet our suffering is starlight."],
+        ["The hand that bends and winds and folds and reaches out again", "is the deep mind's reverent palms-pressed prayer,"],
+        ["and now in this very night, in the third watch when even the crickets cannot sleep,", "the thin gauze white peaked hood, folded with care, is a butterfly poised in flight."]
+      ],
+      stanzasKo: [
+        ["얇은 사(紗) 하이얀 고깔은", "고이 접어서 나빌레라."],
+        ["파르라니 깎은 머리", "박사(薄紗) 고깔에 감추오고,"],
+        ["두 볼에 흐르는 빛이", "정작으로 고와서 서러워라."],
+        ["빈 대(臺)에 황촉(黃燭)불이 말없이 녹는 밤에", "오동(梧桐)잎 잎새마다 달이 지는데,"],
+        ["소매는 길어서 하늘은 넓고,", "돌아설 듯 날아가며 사뿐이 접어 올린 외씨버선이여."],
+        ["까만 눈동자 살포시 들어", "먼 하늘 한 개 별빛에 모도우고,"],
+        ["복사꽃 고운 뺨에 아롱질 듯 두 방울이야", "세사(世事)에 시달려도 번뇌(煩惱)는 별빛이라."],
+        ["휘어져 감기우고 다시 접어 뻗는 손이", "깊은 마음속 거룩한 합장(合掌)인 양하고,"],
+        ["이 밤사 귀또리도 지새는 삼경(三更)인데", "얇은 사(紗) 하이얀 고깔은 고이 접어서 나빌레라."]
+      ]
+    },
+    silence: {
+      writtenDate: "Published in Munjang, 1939; collected in Cheongnokjip, 1946.",
+      deathInfo: ["Cho Ji-hun died on May 17, 1968."],
+      age: "He was 48."
+    }
+  },
+  {
+    id: "020",
+    slug: "flower-yi-yuksa",
+    titleEn: "Flower",
+    titleKo: "꽃",
+    authorEn: "Yi Yuksa",
+    authorKo: "이육사",
+    authorSlug: "yi-yuksa",
+    exhibitionType: "full",
+    mood: ["resistance", "nature"],
+    frameSize: "frame-wide",
+    moodColor: "mood-red",
+    excerpt: "Does the flower not still bloom red, in spite of everything? O promise that, in the end, cannot be broken!",
+    galleryImageFile: "020-scene-1-v1.webp",
+    youtubeId: "3BVj54Uzg38",
+    scenes: [
+      { imageFile: "020-scene-1-v1.webp", alt: "A single red flower rooted in cracked dry earth at dawn", cssClass: "scene-1" },
+      { imageFile: "020-scene-2-v1.webp", alt: "A vast northern tundra plain at cold daybreak", cssClass: "scene-2" },
+      { imageFile: "020-scene-3-v1.webp", alt: "A small flower bud stirring through a thin crust of snow", cssClass: "scene-3" },
+      { imageFile: "020-scene-4-v1.webp", alt: "A luminous cloud of red petals rising above a dark sea", cssClass: "scene-4" },
+      { imageFile: "020-scene-5-v1.webp", alt: "Red butterflies gathering above red blossoms at deep dusk", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["Even in that time when the East — its very sky — has come to an end,", "when not a single drop of rain will fall,", "does the flower not still bloom red, in spite of everything?", "You, ceaseless day that adorns my life with your edge."],
+        ["Even in the cold daybreak of the northern tundra,", "deep inside the snow a flower bud stirs faintly,", "waiting for the dark swarm of swallows to come flying back —", "O promise that, in the end, cannot be broken!"],
+        ["Out at the heart of a single sea, where the waters surge upward,", "in the citadel of flowers that burns along the wind,", "you hosts of memory, intoxicated like butterflies —", "today, here, from this place, I call out to you."]
+      ],
+      stanzasKo: [
+        ["동방은 하늘도 다 끝나고", "비 한 방울 내리잖는 그 때에도", "오히려 꽃은 빨갛게 피지 않는가", "내 목숨을 꾸며 쉬임 없는 날이여"],
+        ["북(北)쪽 툰드라에도 찬 새벽은", "눈 속 깊이 꽃맹아리가 옴작거려", "제비떼 까맣게 날아오길 기다리나니", "마침내 저버리지 못할 약속(約束)이여!"],
+        ["한 바다 복판 용솟음치는 곳", "바람결 따라 타오르는 꽃 성(城)에는", "나비처럼 취하는 회상(回想)의 무리들아", "오늘 내 여기서 너를 불러 보노라"]
+      ]
+    },
+    silence: {
+      writtenDate: "Published posthumously, 1945; collected in Yuksa Sijip, 1946.",
+      deathInfo: ["Yi Yuksa died in Beijing Prison,", "January 16, 1944."],
+      age: "He was 39."
+    }
+  },
+  {
+    id: "021",
+    slug: "i-do-not-know-han-yongun",
+    titleEn: "I Do Not Know",
+    titleKo: "알 수 없어요",
+    authorEn: "Han Yong-un",
+    authorKo: "한용운",
+    authorSlug: "han-yongun",
+    exhibitionType: "full",
+    mood: ["longing", "nature"],
+    frameSize: "frame-wide",
+    moodColor: "mood-deep",
+    excerpt: "Through the windless air, falling quietly with vertical ripples — whose footstep is the paulownia leaf?",
+    galleryImageFile: "021-scene-5-v1.webp",
+    youtubeId: "3TnGjZi5xZQ",
+    scenes: [
+      { imageFile: "021-scene-1-v4.webp", alt: "A fallen paulownia leaf resting on the earth of a temple courtyard", cssClass: "scene-1" },
+      { imageFile: "021-scene-2-v1.webp", alt: "Blue sky glimpsed through a torn gap in dark storm clouds", cssClass: "scene-2" },
+      { imageFile: "021-scene-3-v1.webp", alt: "A weathered stone pagoda with incense smoke rising above it", cssClass: "scene-3" },
+      { imageFile: "021-scene-4-v1.webp", alt: "A small mountain stream winding between mossy stones", cssClass: "scene-4" },
+      { imageFile: "021-scene-5-v1.webp", alt: "A small paper lamp on a temple veranda beneath an evening glow", cssClass: "scene-5" }
+    ],
+    poem: {
+      stanzasEn: [
+        ["Through the windless air, falling quietly with vertical ripples — whose footstep is the paulownia leaf?"],
+        ["At the end of the tedious monsoon, through the torn gap of the fearful black clouds driven on by the west wind, the blue sky that flickers into sight — whose face is it?"],
+        ["Passing through the green moss on a deep tree where no flower blooms, grazing the still sky above an ancient pagoda — the unknown fragrance, whose breath is it?"],
+        ["Born in a place whose source is unknown, sounding against the jutting stones and threading thinly onward — the small stream, winding and winding, whose song is it?"],
+        ["Treading the shoreless sea with lotus-like heels, touching the boundless sky with jade-like hands, gently adorning the sinking sun — the evening glow, whose poem is it?"],
+        ["The ashes left after burning become oil again. My breast that burns without knowing how to cease — whose night does it keep watch over, a faint lamp?"]
+      ],
+      stanzasKo: [
+        ["바람도 없는 공중에 수직(垂直)의 파문을 내며 고요히 떨어지는 오동잎은 누구의 발자취입니까."],
+        ["지리한 장마 끝에 서풍에 몰려가는 무서운 검은 구름의 터진 틈으로 언뜻언뜻 보이는 푸른 하늘은 누구의 얼굴입니까."],
+        ["꽃도 없는 깊은 나무에 푸른 이끼를 거쳐서, 옛 탑(塔) 위의 고요한 하늘을 스치는 알 수 없는 향기(香氣)는 누구의 입김입니까."],
+        ["근원은 알지도 못할 곳에서 나서 돌부리를 울리고 가늘게 흐르는 작은 시내는 굽이굽이 누구의 노래입니까."],
+        ["연꽃 같은 발꿈치로 가이없는 바다를 밟고 옥(玉) 같은 손으로 끝없는 하늘을 만지면서 떨어지는 해를 곱게 단장하는 저녁놀은 누구의 시(詩)입니까."],
+        ["타고 남은 재가 다시 기름이 됩니다. 그칠 줄을 모르고 타는 나의 가슴은 누구의 밤을 지키는 약한 등(燈)불입니까."]
+      ]
+    },
+    silence: {
+      writtenDate: "Published in Nim-ui Chimmuk, 1926.",
+      deathInfo: ["Han Yong-un died on June 29, 1944,", "one year before Korea's liberation."],
+      age: "He was 65."
+    }
   }
 ];
